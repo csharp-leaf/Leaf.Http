@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 
 namespace Leaf.Http
 {
@@ -31,6 +30,7 @@ namespace Leaf.Http
         protected void InitDefaults()
         {
             DefaultRequestHeaders.ExpectContinue = false;
+            Timeout = TimeSpan.FromSeconds(10);
         }
 
         #endregion
@@ -46,14 +46,11 @@ namespace Leaf.Http
             set => DefaultRequestHeaders.AcceptEncoding.SetAsString(value);
         }*/
 
-        // Если использовать свойство AcceptLanguage значение будет не полным
-        private const string AcceptLanguageHeader = "Accept-Language";
         public string AcceptLanguage
         {
             get => DefaultRequestHeaders.AcceptLanguage.AsString();
             set => DefaultRequestHeaders.AcceptLanguage.SetAsString(value);
         }
-        
 
         private const string OriginHeader = "Origin";
         public string Origin
