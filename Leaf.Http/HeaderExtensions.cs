@@ -7,7 +7,7 @@ namespace Leaf.Http
     public static class HeaderExtensions
     {
         // Properties
-        public static string AsString<T>(this ICollection<T> headerValues, string separator = ",")
+        public static string Get<T>(this ICollection<T> headerValues, string separator = ",")
         {
             if (headerValues == null || headerValues.Count == 0)
                 return null;
@@ -15,7 +15,7 @@ namespace Leaf.Http
             return string.Join(separator, headerValues);
         }
 
-        public static void SetAsString<T>(this ICollection<T> header, string value)
+        public static void Set<T>(this ICollection<T> header, string value)
         {
             if (header == null)
                 return;

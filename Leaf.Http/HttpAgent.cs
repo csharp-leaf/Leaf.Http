@@ -48,8 +48,8 @@ namespace Leaf.Http
 
         public string AcceptLanguage
         {
-            get => DefaultRequestHeaders.AcceptLanguage.AsString();
-            set => DefaultRequestHeaders.AcceptLanguage.SetAsString(value);
+            get => DefaultRequestHeaders.AcceptLanguage.Get();
+            set => DefaultRequestHeaders.AcceptLanguage.Set(value);
         }
 
         private const string OriginHeader = "Origin";
@@ -75,8 +75,8 @@ namespace Leaf.Http
 
         public string UserAgent
         {
-            get => DefaultRequestHeaders.UserAgent.AsString();
-            set => DefaultRequestHeaders.UserAgent.SetAsString(value);
+            get => DefaultRequestHeaders.UserAgent.Get();
+            set => DefaultRequestHeaders.UserAgent.Set(value);
         }
 
         #endregion
