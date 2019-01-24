@@ -16,6 +16,7 @@
     <Authors>Grand Silence</Authors>
     <Company>Kelog Studio</Company>
     <Product>Leaf</Product>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
